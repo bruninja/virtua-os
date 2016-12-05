@@ -1,12 +1,12 @@
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
+        <li class="heading"><?= __('Ações') ?></li>
         <li><?= $this->Html->link(__('Edit Cliente'), ['action' => 'edit', $cliente->id]) ?> </li>
         <li><?= $this->Form->postLink(__('Delete Cliente'), ['action' => 'delete', $cliente->id], ['confirm' => __('Are you sure you want to delete # {0}?', $cliente->id)]) ?> </li>
-        <li><?= $this->Html->link(__('List Cliente'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Cliente'), ['action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Recibo'), ['controller' => 'Recibo', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Recibo'), ['controller' => 'Recibo', 'action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('Listar Cliente'), ['action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('Novo Cliente'), ['action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('Listar Recibo'), ['controller' => 'Recibo', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('Novo Recibo'), ['controller' => 'Recibo', 'action' => 'add']) ?> </li>
     </ul>
 </nav>
 <div class="cliente view large-9 medium-8 columns content">
@@ -42,7 +42,7 @@
                 <th scope="col"><?= __('Data') ?></th>
                 <th scope="col"><?= __('Servico Id') ?></th>
                 <th scope="col"><?= __('Cliente Id') ?></th>
-                <th scope="col" class="actions"><?= __('Actions') ?></th>
+                <th scope="col" class="actions"><?= __('Ações') ?></th>
             </tr>
             <?php foreach ($cliente->recibo as $recibo): ?>
             <tr>
@@ -51,9 +51,9 @@
                 <td><?= h($recibo->servico_id) ?></td>
                 <td><?= h($recibo->cliente_id) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['controller' => 'Recibo', 'action' => 'view', $recibo->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['controller' => 'Recibo', 'action' => 'edit', $recibo->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Recibo', 'action' => 'delete', $recibo->id], ['confirm' => __('Are you sure you want to delete # {0}?', $recibo->id)]) ?>
+                    <?= $this->Html->link(__('Ver'), ['controller' => 'Recibo', 'action' => 'view', $recibo->id]) ?>
+                    <?= $this->Html->link(__('Editar'), ['controller' => 'Recibo', 'action' => 'edit', $recibo->id]) ?>
+                    <?= $this->Form->postLink(__('Deletar'), ['controller' => 'Recibo', 'action' => 'delete', $recibo->id], ['confirm' => __('Are you sure you want to delete # {0}?', $recibo->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

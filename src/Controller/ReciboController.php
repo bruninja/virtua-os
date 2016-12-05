@@ -62,8 +62,8 @@ class ReciboController extends AppController
                 $this->Flash->error(__('The recibo could not be saved. Please, try again.'));
             }
         }
-        $servico = $this->Recibo->Servico->find('list', ['limit' => 200]);
-        $cliente = $this->Recibo->Cliente->find('list', ['limit' => 200]);
+        $servico = $this->Recibo->Servico->find('Listar', ['limit' => 200]);
+        $cliente = $this->Recibo->Cliente->find('Listar', ['limit' => 200]);
         $this->set(compact('recibo', 'servico', 'cliente'));
         $this->set('_serialize', ['recibo']);
     }
@@ -90,8 +90,8 @@ class ReciboController extends AppController
                 $this->Flash->error(__('The recibo could not be saved. Please, try again.'));
             }
         }
-        $servico = $this->Recibo->Servico->find('list', ['limit' => 200]);
-        $cliente = $this->Recibo->Cliente->find('list', ['limit' => 200]);
+        $servico = $this->Recibo->Servico->find('Listar', ['limit' => 200]);
+        $cliente = $this->Recibo->Cliente->find('Listar', ['limit' => 200]);
         $this->set(compact('recibo', 'servico', 'cliente'));
         $this->set('_serialize', ['recibo']);
     }

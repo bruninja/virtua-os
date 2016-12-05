@@ -1,11 +1,11 @@
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Recibo'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Servico'), ['controller' => 'Servico', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Servico'), ['controller' => 'Servico', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Cliente'), ['controller' => 'Cliente', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Cliente'), ['controller' => 'Cliente', 'action' => 'add']) ?></li>
+        <li class="heading"><?= __('Ações') ?></li>
+        <li><?= $this->Html->link(__('Novo Recibo'), ['action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('Listar Servico'), ['controller' => 'Servico', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('Novo Servico'), ['controller' => 'Servico', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('Listar Cliente'), ['controller' => 'Cliente', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('Novo Cliente'), ['controller' => 'Cliente', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="recibo index large-9 medium-8 columns content">
@@ -17,7 +17,7 @@
                 <th scope="col"><?= $this->Paginator->sort('data') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('servico_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('cliente_id') ?></th>
-                <th scope="col" class="actions"><?= __('Actions') ?></th>
+                <th scope="col" class="actions"><?= __('Ações') ?></th>
             </tr>
         </thead>
         <tbody>
@@ -28,9 +28,9 @@
                 <td><?= $recibo->has('servico') ? $this->Html->link($recibo->servico->id, ['controller' => 'Servico', 'action' => 'view', $recibo->servico->id]) : '' ?></td>
                 <td><?= $recibo->has('cliente') ? $this->Html->link($recibo->cliente->id, ['controller' => 'Cliente', 'action' => 'view', $recibo->cliente->id]) : '' ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $recibo->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $recibo->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $recibo->id], ['confirm' => __('Are you sure you want to delete # {0}?', $recibo->id)]) ?>
+                    <?= $this->Html->link(__('Ver'), ['action' => 'view', $recibo->id]) ?>
+                    <?= $this->Html->link(__('Editar'), ['action' => 'edit', $recibo->id]) ?>
+                    <?= $this->Form->postLink(__('Deletar'), ['action' => 'delete', $recibo->id], ['confirm' => __('Are you sure you want to delete # {0}?', $recibo->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>
@@ -38,9 +38,9 @@
     </table>
     <div class="paginator">
         <ul class="pagination">
-            <?= $this->Paginator->prev('< ' . __('previous')) ?>
+            <?= $this->Paginator->prev('< ' . __('anterior')) ?>
             <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('next') . ' >') ?>
+            <?= $this->Paginator->next(__('próximo') . ' >') ?>
         </ul>
         <p><?= $this->Paginator->counter() ?></p>
     </div>
