@@ -27,8 +27,8 @@
                 <td><?= $this->Number->format($servico->valor) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('Ver'), ['action' => 'view', $servico->id]) ?>
-                    <?= $this->Html->link(__('Editar'), ['action' => 'edit', $servico->id]) ?>
-                    <?= $this->Form->postLink(__('Deletar'), ['action' => 'delete', $servico->id], ['confirm' => __('Are you sure you want to delete # {0}?', $servico->id)]) ?>
+                    <?= $this->Html->link(__('Edita'), ['action' => 'edit', $servico->id]) ?>
+                    <?= $this->Form->postLink(__('Deleta'), ['action' => 'delete', $servico->id], ['confirm' => __('Are you sure you want to delete # {0}?', $servico->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

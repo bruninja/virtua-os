@@ -55,11 +55,11 @@ class ReciboController extends AppController
         if ($this->request->is('post')) {
             $recibo = $this->Recibo->patchEntity($recibo, $this->request->data);
             if ($this->Recibo->save($recibo)) {
-                $this->Flash->success(__('The recibo has been saved.'));
+                $this->Flash->success(__('O recibo foi salvo.'));
 
                 return $this->redirect(['action' => 'index']);
             } else {
-                $this->Flash->error(__('The recibo could not be saved. Please, try again.'));
+                $this->Flash->error(__('O recibo não pode ser salvo, Por favor, tente novamente'));
             }
         }
         $servico = $this->Recibo->Servico->find('Listar', ['limit' => 200]);
@@ -83,11 +83,11 @@ class ReciboController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $recibo = $this->Recibo->patchEntity($recibo, $this->request->data);
             if ($this->Recibo->save($recibo)) {
-                $this->Flash->success(__('The recibo has been saved.'));
+                $this->Flash->success(__('O recibo foi salvo.'));
 
                 return $this->redirect(['action' => 'index']);
             } else {
-                $this->Flash->error(__('The recibo could not be saved. Please, try again.'));
+                $this->Flash->error(__('O recibo não pode ser salvo, Por favor, tente novamente'));
             }
         }
         $servico = $this->Recibo->Servico->find('Listar', ['limit' => 200]);
@@ -108,9 +108,9 @@ class ReciboController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $recibo = $this->Recibo->get($id);
         if ($this->Recibo->delete($recibo)) {
-            $this->Flash->success(__('The recibo has been deleted.'));
+            $this->Flash->success(__('O recibo has been deleted.'));
         } else {
-            $this->Flash->error(__('The recibo could not be deleted. Please, try again.'));
+            $this->Flash->error(__('O recibo could not be deleted. Please, try again.'));
         }
 
         return $this->redirect(['action' => 'index']);

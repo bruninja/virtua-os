@@ -27,8 +27,8 @@
                 <td><?= h($cliente->cpf) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('Ver'), ['action' => 'view', $cliente->id]) ?>
-                    <?= $this->Html->link(__('Editar'), ['action' => 'edit', $cliente->id]) ?>
-                    <?= $this->Form->postLink(__('Deletar'), ['action' => 'delete', $cliente->id], ['confirm' => __('Are you sure you want to delete # {0}?', $cliente->id)]) ?>
+                    <?= $this->Html->link(__('Edita'), ['action' => 'edit', $cliente->id]) ?>
+                    <?= $this->Form->postLink(__('Deleta'), ['action' => 'delete', $cliente->id], ['confirm' => __('Are you sure you want to delete # {0}?', $cliente->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

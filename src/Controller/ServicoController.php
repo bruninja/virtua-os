@@ -52,11 +52,11 @@ class ServicoController extends AppController
         if ($this->request->is('post')) {
             $servico = $this->Servico->patchEntity($servico, $this->request->data);
             if ($this->Servico->save($servico)) {
-                $this->Flash->success(__('The servico has been saved.'));
+                $this->Flash->success(__('O servico foi salvo.'));
 
                 return $this->redirect(['action' => 'index']);
             } else {
-                $this->Flash->error(__('The servico could not be saved. Please, try again.'));
+                $this->Flash->error(__('O servico não pode ser salvo, Por favor, tente novamente'));
             }
         }
         $this->set(compact('servico'));
@@ -78,11 +78,11 @@ class ServicoController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $servico = $this->Servico->patchEntity($servico, $this->request->data);
             if ($this->Servico->save($servico)) {
-                $this->Flash->success(__('The servico has been saved.'));
+                $this->Flash->success(__('O servico foi salvo.'));
 
                 return $this->redirect(['action' => 'index']);
             } else {
-                $this->Flash->error(__('The servico could not be saved. Please, try again.'));
+                $this->Flash->error(__('O servico não pode ser salvo, Por favor, tente novamente'));
             }
         }
         $this->set(compact('servico'));
@@ -101,9 +101,9 @@ class ServicoController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $servico = $this->Servico->get($id);
         if ($this->Servico->delete($servico)) {
-            $this->Flash->success(__('The servico has been deleted.'));
+            $this->Flash->success(__('O servico has been deleted.'));
         } else {
-            $this->Flash->error(__('The servico could not be deleted. Please, try again.'));
+            $this->Flash->error(__('O servico could not be deleted. Please, try again.'));
         }
 
         return $this->redirect(['action' => 'index']);

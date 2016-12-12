@@ -29,8 +29,8 @@
                 <td><?= $recibo->has('cliente') ? $this->Html->link($recibo->cliente->id, ['controller' => 'Cliente', 'action' => 'view', $recibo->cliente->id]) : '' ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('Ver'), ['action' => 'view', $recibo->id]) ?>
-                    <?= $this->Html->link(__('Editar'), ['action' => 'edit', $recibo->id]) ?>
-                    <?= $this->Form->postLink(__('Deletar'), ['action' => 'delete', $recibo->id], ['confirm' => __('Are you sure you want to delete # {0}?', $recibo->id)]) ?>
+                    <?= $this->Html->link(__('Edita'), ['action' => 'edit', $recibo->id]) ?>
+                    <?= $this->Form->postLink(__('Deleta'), ['action' => 'delete', $recibo->id], ['confirm' => __('Are you sure you want to delete # {0}?', $recibo->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>
